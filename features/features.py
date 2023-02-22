@@ -184,7 +184,10 @@ class FolderContentSync(Feature):
             Path(f"{self.dest}/{'/'.join(k)}/{v}").unlink()
 
 
-def traverse_config(config: Folder, base_folder=[]):
+def traverse_config(config: Folder, base_folder: list[str] | None = None):
+    if base_folder is None:
+        base_folder = []
+
     for folder, contents in config.items():
         if folder == "$schema":
             continue
