@@ -9,8 +9,9 @@ download_url=$(
 archive=$(mktemp)
 curl -Lo $archive $download_url
 
+rm -rf $dest
 mkdir -p $dest
-rm -rf $dest/*
+
 tar -xf $archive -C $dest
 
 exit 0
