@@ -1,3 +1,3 @@
 # mydotfiles
 
-Manage dofiles accross linux installations.
+Manage dofiles across linux installations.
